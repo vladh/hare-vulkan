@@ -16,8 +16,8 @@ including instructions on using glad2 with Hare.
 ## Status
 
 Hare bindings can be generated using glad2 for Vulkan. If you spot any problems
-with the pregenerated bindings, please send an email, or preferably a patch, to
-[vlad@vladh.net](mailto:vlad@vladh.net).
+with the pregenerated bindings, please send an email, or preferably a patch,
+as described below.
 
 **Note:** Extensions are currently not supported due to a limitation in our
 code. Some of the code in the bindings is "protected" by guards. In C this would
@@ -51,3 +51,15 @@ python -m glad --out-path=../my-project --api vk=1.3 --extensions some_extension
 
 Then, simply include the generated bindings by adjusting your `use` path
 appropriately.
+
+## Contributing
+
+Send patches to `~vladh/general@lists.sr.ht` using subject prefix `[PATCH hare-vulkan]`. For example:
+
+```
+git config sendemail.to '~vladh/general@lists.sr.ht'
+git config format.subjectPrefix 'PATCH hare-vulkan'
+git send-email HEAD^
+```
+
+For more information, see [git-send-email.io](https://git-send-email.io/).
